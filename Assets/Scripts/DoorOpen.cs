@@ -6,18 +6,26 @@ public class DoorOpen : MonoBehaviour
 {
     public float speedRotate;
     public float limitDegree;
-    bool openFlag;
-    float degree;
+    private bool openFlag;
+    private bool girlWithin;
+    private float degree;
+    private float bNF = -1;
+    public Transform myself;
+
+    private void Start()
+    {
+        print(myself);
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q)&&girlWithin)
         {
             openFlag = true;
+            bNF = -bNF;
         }
-
         RotateDoor(openFlag);
-
-        transform.Rotate(0, 0, degree);
+        myself.Rotate(0, 0, degree);
 
         //print(transform.rotation.eulerAngles.z);
         //print(openFlag);
@@ -25,15 +33,51 @@ public class DoorOpen : MonoBehaviour
 
     public void RotateDoor(bool open)
     {
-        if (transform.rotation.eulerAngles.z < limitDegree && openFlag)
+        if(bNF == 1)
         {
-            degree = speedRotate * Time.deltaTime;
+            if (transform.rotation.eulerAngles.z < limitDegree && openFlag)
+            {
+                degree = speedRotate * Time.deltaTime*bNF;
+            }
+            if(transform.rotation.eulerAngles.z > limitDegree)
+            {
+                openFlag = false;
+                degree = 0;
+            }
         }
-        if(transform.rotation.eulerAngles.z > limitDegree)
+        if(bNF == -1)
         {
-            openFlag = false;
-            degree = 0;
+            if (transform.rotation.eulerAngles.z > limitDegree-90 && openFlag)
+            {
+                degree = speedRotate * Time.deltaTime*bNF;
+            }
+            if (transform.rotation.eulerAngles.z < limitDegree -90)
+            {
+                openFlag = false;
+                degree = 0;
+            }
         }
+    }
 
+
+    public void OnTriggerEnter2D(Collider2D trigger)
+    {
+        if(trigger.tag == "Player")
+        {
+            girlWithin = true;
+            //print(trigger.gameObject.name+"enter the area");
+        }
+        
+    }
+
+    public void OnTriggerExit2D(Collider2D trigger)
+    {
+        if (trigger.tag == "Player")
+        {
+            girlWithin = false;
+            openFlag = false;
+            //print("exit the area");
+        }
+            
     }
 }
