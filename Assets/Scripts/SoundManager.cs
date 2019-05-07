@@ -12,6 +12,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip[] monsterStep;
     public AudioClip[] background;
     public AudioClip[] animalRoar;
+    public AudioClip[] doorOpen;
+    public AudioClip[] doorClose;
     public Transform player;
 
     Vector3 playerPos;
