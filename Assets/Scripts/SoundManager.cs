@@ -168,9 +168,16 @@ public class SoundManager : MonoBehaviour
     int GetRandom(int clipNum, int lastPlayed)
     {
         int num = Random.Range(0, clipNum);
+        int timesTried = 0;
         while (num == lastPlayed)
         {
+            timesTried++;
             num = Random.Range(0, clipNum);
+            if (timesTried > 500)
+            {
+                Debug.LogError("YOU DONT HAVE ENOUGH SOUNDS AND EVERYTHING IS GONNA BREAK FOR THE REST OF YOUR LIFE");
+                break;
+            }
         }
         return num;
     }

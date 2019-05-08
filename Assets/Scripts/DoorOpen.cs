@@ -27,7 +27,7 @@ public class DoorOpen : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E)&&girlWithin)
         {
-            openFlag = true;
+            //openFlag = true;
             bNF = -bNF;
             if (bNF == 1)
             {
