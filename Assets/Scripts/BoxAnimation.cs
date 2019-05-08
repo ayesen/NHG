@@ -28,7 +28,7 @@ public class BoxAnimation : MonoBehaviour
     {
         thisAnimator.SetBool("closed", true);
         thisAnimator.SetBool("closing", false);
-
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
