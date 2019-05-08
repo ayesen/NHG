@@ -20,11 +20,15 @@ public class closetAnimation : MonoBehaviour
     public void OpenCloset()
     {
         thisAnimator.SetBool("opened", true);
+        thisAnimator.SetBool("openning", false);
+
     }
 
     public void CloseCloset()
     {
         thisAnimator.SetBool("closed", true);
+        thisAnimator.SetBool("closing", false);
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -38,6 +42,7 @@ public class closetAnimation : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     thisAnimator.SetBool("openning", true);
+                    thisAnimator.SetBool("closed", false);
                 }
             }
             if (thisAnimator.GetBool("opened") == true)
@@ -45,6 +50,8 @@ public class closetAnimation : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     thisAnimator.SetBool("closing", true);
+                    thisAnimator.SetBool("opened", false);
+
 
                 }
             }
