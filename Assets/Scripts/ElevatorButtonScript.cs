@@ -34,6 +34,7 @@ public class ElevatorButtonScript : MonoBehaviour
         {
             leftDoorTarget = leftDoorClosedPos;
             rightDoorTarget = rightDoorClosedPos;
+            //SoundManager.me.EleDoorClose(rightDoorClosedPos);
         }
     }
 
@@ -46,6 +47,7 @@ public class ElevatorButtonScript : MonoBehaviour
                 // open door
                 leftDoorTarget = leftDoorOpenPos;
                 rightDoorTarget = rightDoorOpenPos;
+                SoundManager.me.EleDoorOpen(rightDoorOpenPos);
             }
             else if (!es.on && Input.GetKeyDown(KeyCode.E))
             {
