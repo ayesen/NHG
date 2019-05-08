@@ -9,6 +9,7 @@ public class newElevatorScript : MonoBehaviour
     public Vector3 targetPos3;
     public Vector3 targetPos2;
     public float moveSpd;
+    public bool girlInside = false;
 
     public GameObject player;
     public GameObject floor1;
@@ -47,7 +48,17 @@ public class newElevatorScript : MonoBehaviour
         if (trigger.tag == "Player")
         {
             print("cargo in the ship");
-            player.GetComponent<PlayerMove>().ready2Go = true;
+            girlInside = true;
+            //player.GetComponent<PlayerMove>().ready2Go = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            print("cargo is gone");
+            girlInside = false;
         }
     }
 }
