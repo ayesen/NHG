@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
-    public static bool on = true;
+    public EnemyScript[] ens;
+
+    public static bool on = true; // indicate torchlight switch
     
     public float viewRadius;
     [Range(0,360)]
@@ -82,10 +84,11 @@ public class FieldOfView : MonoBehaviour
             {
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
 
-                if (!Physics2D.Raycast(transform.position,dirToTarget, dstToTarget, obstacleMask))
+                if (!Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask)) // found enemy
                 {
                     visibleTargets.Add(target);
                     SoundManager.me.MonsterRoarSound(monster.position);
+
                 }
             }
         }

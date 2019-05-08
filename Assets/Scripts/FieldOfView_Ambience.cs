@@ -48,7 +48,7 @@ public class FieldOfView_Ambience : MonoBehaviour
         DrawFieldOfView();
     }
 
-    //void FindVisibleTargets() // not working
+    //void FindVisibleTargets()
     //{
     //    visibleTargets.Clear();
     //    Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, targetMask);
