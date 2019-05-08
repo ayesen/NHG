@@ -1,25 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DoorOpen : MonoBehaviour
 {
     public float speedRotate;
     public float limitDegree;
+    public Text fInteraction;
     private bool openFlag;
     private bool girlWithin;
     private float degree;
     private float bNF = -1;
+    private string interWords;
     public Transform myself;
+
+    
 
     private void Start()
     {
         //print(myself);
+        fInteraction.text = "LeftClick to Turn Off/On the Light Torch";
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q)&&girlWithin)
+        if (Input.GetKeyDown(KeyCode.E)&&girlWithin)
         {
             openFlag = true;
             bNF = -bNF;
@@ -71,6 +77,9 @@ public class DoorOpen : MonoBehaviour
         if(trigger.tag == "Player")
         {
             girlWithin = true;
+            interWords = "Press E";
+            fInteraction.text = interWords;
+
             //print(trigger.gameObject.name+"enter the area");
         }
         
@@ -82,6 +91,8 @@ public class DoorOpen : MonoBehaviour
         {
             girlWithin = false;
             openFlag = false;
+            interWords = " ";
+            fInteraction.text = interWords;
             //print("exit the area");
         }
             
