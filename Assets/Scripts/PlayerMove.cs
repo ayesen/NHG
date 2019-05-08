@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public static PlayerMove me;
+
+    //items and shit
+    public bool red = false;
+    public bool blue = false;
+    public bool promptMSG = false;
+
     public bool ready2Go = false;
 
     Rigidbody2D rb;
@@ -33,6 +40,11 @@ public class PlayerMove : MonoBehaviour
 
     public Animator thisAnimator;
 
+    private void Awake()
+    {
+        me = this;
+    }
+
     void Start()
     {
         player = GetComponent<Transform>();
@@ -51,6 +63,23 @@ public class PlayerMove : MonoBehaviour
 
    void Update()
     {
+        // investigate and shit
+        //if (promptMSG && Input.GetKeyDown(KeyCode.E)) // if player is at the thing and press e
+        //{
+        //    print("investigate");
+        //}
+
+        if (red)
+        {
+            print("red");
+        }
+        if (blue)
+        {
+            print("blue");
+            
+        }
+
+
         velocity = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0).normalized * moveSpd;
         MouseLook();
         

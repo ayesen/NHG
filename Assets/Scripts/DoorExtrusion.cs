@@ -23,7 +23,7 @@ public class DoorExtrusion : MonoBehaviour
         cube.transform.position = new Vector3(transform.position.x, transform.position.y, +height / 2);
         cube.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, height);
         cube.layer = 11;
-
+        //cube.transform.parent = transform;
         if (whichFloorRUOn == 2)
         {
             cube.transform.parent = floor2.transform; //set it to be child of floor2

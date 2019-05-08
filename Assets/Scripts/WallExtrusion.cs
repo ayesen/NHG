@@ -23,13 +23,15 @@ public class WallExtrusion : MonoBehaviour
         cube.transform.position = new Vector3(transform.position.x, transform.position.y, +height / 2);
         cube.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, height);
         cube.layer = 11;
+        //cube.transform.parent = this.transform;
+
         if (whichFloorRUOn == 2)
         {
-            cube.transform.parent = floor2.transform; //set it to be a child of floor2
+            cube.transform.parent = floor2.transform; //set it to be a child of the obstacle
         }
         else if (whichFloorRUOn == 3)
         {
-            cube.transform.parent = floor3.transform; //set it to be a child of floor3
+            cube.transform.parent = floor3.transform; //set it to be a child of the obstacle
         }
         cube.GetComponent<MeshRenderer>().material = wallExtrusionMaterial;
     }
