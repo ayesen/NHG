@@ -40,9 +40,6 @@ public class DoorOpen : MonoBehaviour
         }
         RotateDoor(openFlag);
         myself.Rotate(0, 0, degree);
-
-        //print(transform.rotation.eulerAngles.z);
-        //print(openFlag);
     }
 
     public void RotateDoor(bool open)
