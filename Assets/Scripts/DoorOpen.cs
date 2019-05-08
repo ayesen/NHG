@@ -23,6 +23,14 @@ public class DoorOpen : MonoBehaviour
         {
             openFlag = true;
             bNF = -bNF;
+            if (bNF == 1)
+            {
+                SoundManager.me.DoorOpenSound(transform.position);
+            }
+            if (bNF == -1)
+            {
+                SoundManager.me.DoorCloseSound(transform.position);
+            }
         }
         RotateDoor(openFlag);
         myself.Rotate(0, 0, degree);
@@ -38,6 +46,7 @@ public class DoorOpen : MonoBehaviour
             if (transform.rotation.eulerAngles.z < limitDegree && openFlag)
             {
                 degree = speedRotate * Time.deltaTime*bNF;
+                
             }
             if(transform.rotation.eulerAngles.z > limitDegree)
             {
