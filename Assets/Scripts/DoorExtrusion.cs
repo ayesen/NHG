@@ -21,7 +21,7 @@ public class DoorExtrusion : MonoBehaviour
         doorExtrusionMaterial = Resources.Load("Door Extrusion Material", typeof(Material)) as Material;
         cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.transform.position = new Vector3(transform.position.x, transform.position.y, +height / 2);
-        cube.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, height);
+        cube.transform.localScale = new Vector3(transform.lossyScale.x, transform.lossyScale.y, height);
         cube.layer = 11;
         //cube.transform.parent = transform;
         if (whichFloorRUOn == 2)
