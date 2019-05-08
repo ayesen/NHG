@@ -11,7 +11,7 @@ public class DoorOpen : MonoBehaviour
     private bool openFlag;
     private bool girlWithin;
     private float degree;
-    private float bNF = -1;
+    public float bNF = -1; // 1: opened -1: closed
     private string interWords;
     public Transform myself;
 
@@ -27,7 +27,7 @@ public class DoorOpen : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E)&&girlWithin)
         {
-            //openFlag = true;
+            openFlag = true;
             bNF = -bNF;
             if (bNF == 1)
             {
