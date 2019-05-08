@@ -11,7 +11,7 @@ public class DoorOpen : MonoBehaviour
     private bool openFlag;
     private bool girlWithin;
     private float degree;
-    private float bNF = -1;
+    public float bNF = -1; // 1: opened -1: closed
     private string interWords;
     public Transform myself;
 
