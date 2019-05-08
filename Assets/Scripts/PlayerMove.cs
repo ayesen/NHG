@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public bool ready2Go = false;
+
     Rigidbody2D rb;
     Camera viewCamera;
 
@@ -41,7 +43,6 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-
     void FixedUpdate()
     {
         position = player.position;
@@ -50,9 +51,10 @@ public class PlayerMove : MonoBehaviour
 
    void Update()
     {
-        velocity = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"),0 ).normalized * moveSpd;
-
-        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0 || Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0)
+        velocity = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0).normalized * moveSpd;
+        MouseLook();
+        
+        if ((Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0 || Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0))
         {
             thisAnimator.SetBool("running", true);
         }
@@ -60,7 +62,7 @@ public class PlayerMove : MonoBehaviour
         {
             thisAnimator.SetBool("running", false);
         }
-        MouseLook();
+        
     }
 
 

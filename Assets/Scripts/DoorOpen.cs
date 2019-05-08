@@ -14,7 +14,7 @@ public class DoorOpen : MonoBehaviour
 
     private void Start()
     {
-        print(myself);
+        //print(myself);
     }
 
     void Update()
