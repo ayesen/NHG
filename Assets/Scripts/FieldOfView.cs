@@ -52,12 +52,14 @@ public class FieldOfView : MonoBehaviour
                 print("off");
                 on = false;
                 viewAngle = 0;
+                SoundManager.me.LightClose(transform.position);
             }
             else if (!on)
             {
                 print("on");
                 on = true;
                 viewAngle = viewAngleAmount;
+                SoundManager.me.LightOpen(transform.position);
             }
         }
     }
