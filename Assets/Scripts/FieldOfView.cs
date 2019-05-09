@@ -49,24 +49,36 @@ public class FieldOfView : MonoBehaviour
         {
             if (on)
             {
-                print("off");
+                //print("off");
                 on = false;
                 viewAngle = 0;
                 SoundManager.me.LightClose(transform.position);
             }
             else if (!on)
             {
-                print("on");
+                //print("on");
                 on = true;
                 viewAngle = viewAngleAmount;
                 SoundManager.me.LightOpen(transform.position);
             }
         }
+        SetStayToFalse();
     }
 
     private void LateUpdate()
     {
         DrawFieldOfView();
+    }
+
+    void SetStayToFalse() // if there is visible targets, then set all the visible targets' stay to false
+    {
+        if (visibleTargets.Count > 0)
+        {
+            for (int i = 0; i < visibleTargets.Count; i++)
+            {
+                visibleTargets[i].GetComponent<StoreEnemyTarget>().GetComponent<FollowPlayer>().stay = false;
+            }
+        }
     }
 
     void FindVisibleTargets()
@@ -82,7 +94,7 @@ public class FieldOfView : MonoBehaviour
             {
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
 
-                if (!Physics2D.Raycast(transform.position,dirToTarget, dstToTarget, obstacleMask))
+                if (!Physics2D.Raycast(transform.position,dirToTarget, dstToTarget, obstacleMask)) // found an enemy
                 {
                     visibleTargets.Add(target);
                     SoundManager.me.MonsterRoarSound(monster.position);

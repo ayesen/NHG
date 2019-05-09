@@ -30479,6 +30479,8 @@ MonoBehaviour:
   player: {fileID: 1790452038}
   monster: {fileID: 901524975}
   currentMonster: {x: 0, y: 0, z: 0}
+  posInEachRoom: []
+  stay: 1
 --- !u!4 &901524977
 Transform:
   m_ObjectHideFlags: 0
@@ -34792,6 +34794,7 @@ MonoBehaviour:
   door1: {fileID: 1037867972}
   door2: {fileID: 748454080}
   noWayOut: 1
+  RoomNum: 2
 --- !u!1 &1020464083
 GameObject:
   m_ObjectHideFlags: 0
@@ -36247,6 +36250,17 @@ MonoBehaviour:
   player: {fileID: 1790452038}
   monster: {fileID: 1333644901}
   currentMonster: {x: 0, y: 0, z: 0}
+  posInEachRoom:
+  - {x: 0, y: 0, z: 0}
+  - {x: -9.93, y: 1.33, z: 10}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  stay: 1
 --- !u!4 &1053474100
 Transform:
   m_ObjectHideFlags: 0
@@ -36255,7 +36269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053474098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.28, y: -0.78, z: 10}
+  m_LocalPosition: {x: -9.93, y: 1.33, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39382,7 +39396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1146577578
 Transform:
   m_ObjectHideFlags: 0
@@ -46136,9 +46150,10 @@ GameObject:
   - component: {fileID: 1333644904}
   - component: {fileID: 1333644903}
   - component: {fileID: 1333644902}
+  - component: {fileID: 1333644908}
   m_Layer: 9
   m_Name: enemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46277,13 +46292,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333644901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.98, y: 2.53, z: 10}
+  m_LocalPosition: {x: -9.92, y: 2.53, z: 10}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 471657356}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1333644908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333644901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291606c4bbc2629498d76030a51ec678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTarget: {fileID: 1053474098}
 --- !u!1 &1334983923
 GameObject:
   m_ObjectHideFlags: 0
