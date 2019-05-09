@@ -275,6 +275,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 3382738}
+  goldenKeyDoor: 0
 --- !u!1 &5942377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1135,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 29089587}
+  goldenKeyDoor: 0
 --- !u!1 &29544104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,6 +1413,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 34089206}
+  goldenKeyDoor: 0
 --- !u!1 &35751477
 GameObject:
   m_ObjectHideFlags: 0
@@ -8838,6 +8841,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 270404986}
+  goldenKeyDoor: 0
 --- !u!1 &272152143
 GameObject:
   m_ObjectHideFlags: 0
@@ -9933,6 +9937,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 295741799}
+  goldenKeyDoor: 0
 --- !u!1 &296903423
 GameObject:
   m_ObjectHideFlags: 0
@@ -12601,6 +12606,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 376117526}
+  goldenKeyDoor: 0
 --- !u!1 &376161042
 GameObject:
   m_ObjectHideFlags: 0
@@ -16845,6 +16851,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 504930936}
+  goldenKeyDoor: 0
 --- !u!1 &506516424
 GameObject:
   m_ObjectHideFlags: 0
@@ -17791,6 +17798,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 537519120}
+  goldenKeyDoor: 0
 --- !u!1 &538374216
 GameObject:
   m_ObjectHideFlags: 0
@@ -20550,6 +20558,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 597492047}
+  goldenKeyDoor: 0
 --- !u!1 &600938518
 GameObject:
   m_ObjectHideFlags: 0
@@ -26950,6 +26959,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 748454081}
+  goldenKeyDoor: 0
 --- !u!1 &750635347
 GameObject:
   m_ObjectHideFlags: 0
@@ -29390,6 +29400,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 815669554}
+  goldenKeyDoor: 0
 --- !u!1 &817056142
 GameObject:
   m_ObjectHideFlags: 0
@@ -33315,6 +33326,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 937841483}
+  goldenKeyDoor: 0
 --- !u!1 &937953135
 GameObject:
   m_ObjectHideFlags: 0
@@ -35691,6 +35703,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1001480857}
+  goldenKeyDoor: 0
 --- !u!1 &1003205130
 GameObject:
   m_ObjectHideFlags: 0
@@ -35768,6 +35781,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1003205131}
+  goldenKeyDoor: 0
 --- !u!1 &1003269919
 GameObject:
   m_ObjectHideFlags: 0
@@ -37779,6 +37793,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1037867973}
+  goldenKeyDoor: 0
 --- !u!1 &1039081960
 GameObject:
   m_ObjectHideFlags: 0
@@ -38035,7 +38050,9 @@ MonoBehaviour:
   monster: {fileID: 1333644901}
   currentMonster: {x: 0, y: 0, z: 0}
   posInEachRoom: []
-  stay: 1
+  roomSealed: 1
+  activated: 0
+  roomEnemyIsIn: 0
 --- !u!4 &1053474100
 Transform:
   m_ObjectHideFlags: 0
@@ -41657,6 +41674,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1153173922}
+  goldenKeyDoor: 0
 --- !u!1 &1153681857
 GameObject:
   m_ObjectHideFlags: 0
@@ -45341,6 +45359,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1256817737}
+  goldenKeyDoor: 0
 --- !u!1 &1261015900
 GameObject:
   m_ObjectHideFlags: 0
@@ -56784,6 +56803,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1554278224}
+  goldenKeyDoor: 0
 --- !u!1 &1555498115
 GameObject:
   m_ObjectHideFlags: 0
@@ -62917,6 +62937,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1662249037}
+  goldenKeyDoor: 0
 --- !u!1 &1663396578
 GameObject:
   m_ObjectHideFlags: 0
@@ -64931,6 +64952,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1716909935}
+  goldenKeyDoor: 0
 --- !u!1 &1722997452
 GameObject:
   m_ObjectHideFlags: 0
@@ -67371,9 +67393,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f210ed39d5ccb4e50bc22634c68529c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomPlayerIsIn: 0
   red: 0
   blue: 0
   promptMSG: 0
+  silverKey: 0
+  goldenKey: 0
   ready2Go: 0
   moveSpd: 3
   WaitTime: 0.1
@@ -68980,6 +69005,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1829787443}
+  goldenKeyDoor: 0
 --- !u!1 &1832909712
 GameObject:
   m_ObjectHideFlags: 0
@@ -73793,6 +73819,7 @@ GameObject:
   - component: {fileID: 1946776943}
   - component: {fileID: 1946776942}
   - component: {fileID: 1946776941}
+  - component: {fileID: 1946776945}
   m_Layer: 0
   m_Name: DoorKeyCabinet
   m_TagString: Untagged
@@ -73813,7 +73840,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.098376155, y: 0.014053702}
+  m_Offset: {x: 0.24346805, y: 0.014053464}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -73824,7 +73851,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1967523, y: 1.3466594}
+  m_Size: {x: 1.4869361, y: 1.8345358}
   m_EdgeRadius: 0
 --- !u!61 &1946776942
 BoxCollider2D:
@@ -73914,6 +73941,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &1946776945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946776940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7685489ab2be54995ba991ccc09278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldenKeyCabinet: 0
+  silverKeyCabinet: 1
+  fInteraction: {fileID: 1933978892}
 --- !u!1 &1949838525
 GameObject:
   m_ObjectHideFlags: 0
@@ -74722,6 +74764,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1974285925}
+  goldenKeyDoor: 0
 --- !u!1 &1978331090
 GameObject:
   m_ObjectHideFlags: 0
