@@ -13,7 +13,7 @@ public class FieldOfView : MonoBehaviour
 
     public LayerMask targetMask;
     public LayerMask obstacleMask;
-
+    
     [HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
 
@@ -76,7 +76,9 @@ public class FieldOfView : MonoBehaviour
         {
             for (int i = 0; i < visibleTargets.Count; i++)
             {
-                visibleTargets[i].GetComponent<StoreEnemyTarget>().enemyTarget.GetComponent<FollowPlayer>().stay = false;
+
+
+                visibleTargets[i].gameObject.GetComponent<StoreEnemyTarget>().enemyTarget.GetComponent<FollowPlayer>().activated = true;
             }
         }
     }

@@ -9,7 +9,10 @@ public class FollowPlayer : MonoBehaviour
     public Vector3 currentMonster;
     public Vector3[] posInEachRoom;
 
-    public bool stay = true; // indicate whether the enemy stay still when the doors are closed or chase the player
+    public bool roomSealed = true; // indicate if the room is cealed
+    public bool activated = false; // indicate if the enemy has been irradiated
+
+    public int roomEnemyIsIn = 0; // indicate which room the enemy is in
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +24,7 @@ public class FollowPlayer : MonoBehaviour
     void Update()
     {
         currentMonster = monster.transform.position;
-        if (FieldOfView.on && !stay)
+        if (FieldOfView.on && !roomSealed && activated) // FieldOfView.on indicate whether the torchlight is on
         {
             transform.position = player.transform.position;
         }
@@ -30,9 +33,10 @@ public class FollowPlayer : MonoBehaviour
         {
             transform.position = currentMonster;
         }
-        if (stay)
+
+        if (player.GetComponent<PlayerMove>().roomPlayerIsIn == roomEnemyIsIn && FieldOfView.on && activated) // if player and enemy in the same room, the enemy is activated, and the torchligth is on, chase player
         {
-            // need to get which room the enemy is in?
+            transform.position = player.transform.position;
         }
     }
 }

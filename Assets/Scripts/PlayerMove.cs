@@ -6,13 +6,18 @@ public class PlayerMove : MonoBehaviour
 {
     public static PlayerMove me;
 
+    // enemy ai and shit
+    public int roomPlayerIsIn = 0;
+
     //items and shit
     public bool red = false;
     public bool blue = false;
     public bool promptMSG = false;
 
+    // elevator and shit
     public bool ready2Go = false;
 
+    // moving and shit
     Rigidbody2D rb;
     Camera viewCamera;
 
@@ -91,7 +96,23 @@ public class PlayerMove : MonoBehaviour
         {
             thisAnimator.SetBool("running", false);
         }
-        
+
+        if(thisAnimator.GetBool("black")==false)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                thisAnimator.SetBool("black", true);
+            }
+        }
+        else if (thisAnimator.GetBool("black") == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                thisAnimator.SetBool("black", false);
+            }
+        }
+
+
     }
 
 
