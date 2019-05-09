@@ -14,6 +14,7 @@ public class DoorOpen : MonoBehaviour
     public float bNF = -1; // 1: opened -1: closed
     private string interWords;
     public Transform myself;
+    public bool silverKeyDoor;
     public bool goldenKeyDoor;
 
     private void Start()
@@ -24,23 +25,63 @@ public class DoorOpen : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && girlWithin && !PlayerMove.me.silverKey)
+        if (silverKeyDoor)
         {
-            interWords = "You need a silver key";
-            fInteraction.text = interWords;
-        }
-
-        if (Input.GetKeyDown(KeyCode.E)&&girlWithin&&PlayerMove.me.silverKey)
-        {
-            openFlag = true;
-            bNF = -bNF;
-            if (bNF == 1)
+            if (Input.GetKeyDown(KeyCode.E) && girlWithin && !PlayerMove.me.silverKey)
             {
-                SoundManager.me.DoorOpenSound(transform.position);
+                interWords = "You need a silver key";
+                fInteraction.text = interWords;
             }
-            if (bNF == -1)
+
+            if (Input.GetKeyDown(KeyCode.E)&&girlWithin&&PlayerMove.me.silverKey)
             {
-                SoundManager.me.DoorCloseSound(transform.position);
+                openFlag = true;
+                bNF = -bNF;
+                if (bNF == 1)
+                {
+                         SoundManager.me.DoorOpenSound(transform.position);
+                }
+                if (bNF == -1)
+                {
+                    SoundManager.me.DoorCloseSound(transform.position);
+                }
+            }   
+        }else if (goldenKeyDoor)
+        {
+            if (Input.GetKeyDown(KeyCode.E) && girlWithin && !PlayerMove.me.goldenKey)
+            {
+                interWords = "You need a golden key";
+                fInteraction.text = interWords;
+            }
+
+            if (Input.GetKeyDown(KeyCode.E) && girlWithin && PlayerMove.me.goldenKey)
+            {
+                openFlag = true;
+                bNF = -bNF;
+                if (bNF == 1)
+                {
+                    SoundManager.me.DoorOpenSound(transform.position);
+                }
+                if (bNF == -1)
+                {
+                    SoundManager.me.DoorCloseSound(transform.position);
+                }
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.E) && girlWithin)
+            {
+                openFlag = true;
+                bNF = -bNF;
+                if (bNF == 1)
+                {
+                    SoundManager.me.DoorOpenSound(transform.position);
+                }
+                if (bNF == -1)
+                {
+                    SoundManager.me.DoorCloseSound(transform.position);
+                }
             }
         }
         RotateDoor(openFlag);

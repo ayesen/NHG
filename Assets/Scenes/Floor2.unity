@@ -275,6 +275,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 3382738}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &5942377
 GameObject:
@@ -1135,6 +1136,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 29089587}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &29544104
 GameObject:
@@ -1413,6 +1415,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 34089206}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &35751477
 GameObject:
@@ -8841,6 +8844,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 270404986}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &272152143
 GameObject:
@@ -9937,6 +9941,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 295741799}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &296903423
 GameObject:
@@ -12606,6 +12611,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 376117526}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &376161042
 GameObject:
@@ -16851,6 +16857,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 504930936}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &506516424
 GameObject:
@@ -17798,6 +17805,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 537519120}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &538374216
 GameObject:
@@ -20558,6 +20566,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 597492047}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &600938518
 GameObject:
@@ -23124,6 +23133,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &656062026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 656062027}
+  - component: {fileID: 656062028}
+  m_Layer: 0
+  m_Name: BlackGirl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &656062027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656062026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1790452039}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &656062028
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656062026}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f902972218e29364185862e15c7791a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &657263050
 GameObject:
   m_ObjectHideFlags: 0
@@ -26959,6 +27018,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 748454081}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &750635347
 GameObject:
@@ -29400,6 +29460,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 815669554}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &817056142
 GameObject:
@@ -33326,6 +33387,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 937841483}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &937953135
 GameObject:
@@ -35703,6 +35765,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1001480857}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &1003205130
 GameObject:
@@ -35781,6 +35844,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1003205131}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &1003269919
 GameObject:
@@ -37793,6 +37857,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1037867973}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &1039081960
 GameObject:
@@ -41674,6 +41739,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1153173922}
+  silverKeyDoor: 1
   goldenKeyDoor: 0
 --- !u!1 &1153681857
 GameObject:
@@ -45359,6 +45425,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1256817737}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &1261015900
 GameObject:
@@ -56803,6 +56870,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1554278224}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &1555498115
 GameObject:
@@ -62937,6 +63005,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1662249037}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &1663396578
 GameObject:
@@ -64952,6 +65021,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1716909935}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &1722997452
 GameObject:
@@ -67270,6 +67340,7 @@ Transform:
   - {fileID: 1162725894}
   - {fileID: 1033058951}
   - {fileID: 1142368869}
+  - {fileID: 656062027}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -67413,6 +67484,7 @@ MonoBehaviour:
   walkSpeed: 0.2
   pov: 0
   thisAnimator: {fileID: 1162725896}
+  blackAnimator: {fileID: 656062028}
   defaultSpriteAngle: 0
 --- !u!4 &1790719118 stripped
 Transform:
@@ -69005,6 +69077,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1829787443}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &1832909712
 GameObject:
@@ -74764,6 +74837,7 @@ MonoBehaviour:
   fInteraction: {fileID: 1933978892}
   bNF: -1
   myself: {fileID: 1974285925}
+  silverKeyDoor: 0
   goldenKeyDoor: 0
 --- !u!1 &1978331090
 GameObject:
