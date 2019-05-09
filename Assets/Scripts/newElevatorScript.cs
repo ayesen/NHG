@@ -49,6 +49,7 @@ public class newElevatorScript : MonoBehaviour
         {
             print("cargo in the ship");
             girlInside = true;
+            SoundManager.me.EleLongMusic(transform.position);
             //player.GetComponent<PlayerMove>().ready2Go = true;
         }
     }

@@ -95,7 +95,7 @@ public class SoundManager : MonoBehaviour
         PlaySound(elevator, 0, eleDoor);
     }
 
-    public void EleDoorDoor(Vector3 eleDoor)
+    public void EleDoorClose(Vector3 eleDoor)
     {
         PlaySound(elevator, 1, eleDoor);
     }

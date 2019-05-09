@@ -23,7 +23,8 @@ public class ElectricityScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            if (PlayerMove.me.blue && PlayerMove.me.red && Input.GetKeyDown(KeyCode.E))
+
+            if (Input.GetKeyDown(KeyCode.E))//&&PlayerMove.me.blue && PlayerMove.me.red)
             {
                 print("elevator on");
                 on = true;
