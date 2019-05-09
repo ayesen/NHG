@@ -44,6 +44,7 @@ public class PlayerMove : MonoBehaviour
     Vector3 position;
 
     public Animator thisAnimator;
+    public Animator blackAnimator;
 
     private void Awake()
     {
@@ -91,26 +92,28 @@ public class PlayerMove : MonoBehaviour
         if ((Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0 || Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0))
         {
             thisAnimator.SetBool("running", true);
+            blackAnimator.SetBool("running", true);
         }
         else
         {
             thisAnimator.SetBool("running", false);
+            blackAnimator.SetBool("running", false);
         }
 
-        if(thisAnimator.GetBool("black")==false)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                thisAnimator.SetBool("black", true);
-            }
-        }
-        else if (thisAnimator.GetBool("black") == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                thisAnimator.SetBool("black", false);
-            }
-        }
+        //if(thisAnimator.GetBool("black")==false)
+        //{
+        //    if (Input.GetKeyDown(KeyCode.Mouse0))
+        //    {
+        //        thisAnimator.SetBool("black", true);
+        //    }
+        //}
+        //else if (thisAnimator.GetBool("black") == true)
+        //{
+        //    if (Input.GetKeyDown(KeyCode.Mouse0))
+        //    {
+        //        thisAnimator.SetBool("black", false);
+        //    }
+        //}
 
 
     }
