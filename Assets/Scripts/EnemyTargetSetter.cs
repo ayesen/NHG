@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour
+public class EnemyTargetSetter : MonoBehaviour
 {
     public GameObject player;
     public GameObject monster;
@@ -38,5 +38,10 @@ public class FollowPlayer : MonoBehaviour
         {
             transform.position = player.transform.position;
         }
+
+        // need to check if there is a light source other than player's torchlight
+        // need to know if light source is in a cealed room
+        // need to know if light source is active
+        // need to know light source's light intensity
     }
 }

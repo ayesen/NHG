@@ -78,7 +78,7 @@ public class FieldOfView : MonoBehaviour
             {
 
 
-                visibleTargets[i].gameObject.GetComponent<StoreEnemyTarget>().enemyTarget.GetComponent<FollowPlayer>().activated = true;
+                visibleTargets[i].gameObject.GetComponent<StoreEnemyTarget>().enemyTarget.GetComponent<EnemyTargetSetter>().activated = true;
             }
         }
     }

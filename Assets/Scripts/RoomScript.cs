@@ -33,8 +33,8 @@ public class RoomScript : MonoBehaviour
     {
         if (collision.tag == "Enemy" && noWayOut) // if the enemy is inside the room and noWayOut is true, Enemy target stays inside the room
         {
-            collision.GetComponent<StoreEnemyTarget>().enemyTarget.GetComponent<FollowPlayer>().roomSealed = true;
-            collision.GetComponent<StoreEnemyTarget>().enemyTarget.GetComponent<FollowPlayer>().roomEnemyIsIn = RoomNum;
+            collision.GetComponent<StoreEnemyTarget>().enemyTarget.GetComponent<EnemyTargetSetter>().roomSealed = true;
+            collision.GetComponent<StoreEnemyTarget>().enemyTarget.GetComponent<EnemyTargetSetter>().roomEnemyIsIn = RoomNum;
         }
 
         if (collision.tag == "Player")
@@ -48,7 +48,7 @@ public class RoomScript : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            collision.GetComponent<StoreEnemyTarget>().enemyTarget.GetComponent<FollowPlayer>().roomSealed = false;
+            collision.GetComponent<StoreEnemyTarget>().enemyTarget.GetComponent<EnemyTargetSetter>().roomSealed = false;
         }
     }
 }
