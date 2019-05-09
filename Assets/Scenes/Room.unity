@@ -6633,6 +6633,7 @@ MonoBehaviour:
   speedRotate: 50
   limitDegree: 91
   fInteraction: {fileID: 0}
+  bNF: -1
   myself: {fileID: 279635085}
 --- !u!4 &279635085
 Transform:
@@ -11218,6 +11219,8 @@ MonoBehaviour:
   player: {fileID: 684778245}
   monster: {fileID: 810754584}
   currentMonster: {x: 0, y: 0, z: 0}
+  posInEachRoom: []
+  stay: 1
 --- !u!1 &490624707
 GameObject:
   m_ObjectHideFlags: 0
@@ -24565,6 +24568,7 @@ MonoBehaviour:
   speedRotate: 50
   limitDegree: 181
   fInteraction: {fileID: 0}
+  bNF: -1
   myself: {fileID: 1150879812}
 --- !u!4 &1150879812
 Transform:
