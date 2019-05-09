@@ -21,6 +21,7 @@ public class FieldOfViewEditor : Editor
         foreach(Transform visibleTarget in fow.visibleTargets)
         {
             Handles.DrawLine(fow.transform.position, visibleTarget.position);
+            //Handles.DrawLine(fow.GetComponent<Transform>().position, visibleTarget.GetComponent<Transform>().position);
         }
 
         
