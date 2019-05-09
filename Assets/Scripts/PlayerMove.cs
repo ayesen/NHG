@@ -96,7 +96,23 @@ public class PlayerMove : MonoBehaviour
         {
             thisAnimator.SetBool("running", false);
         }
-        
+
+        if(thisAnimator.GetBool("black")==false)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                thisAnimator.SetBool("black", true);
+            }
+        }
+        else if (thisAnimator.GetBool("black") == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                thisAnimator.SetBool("black", false);
+            }
+        }
+
+
     }
 
 

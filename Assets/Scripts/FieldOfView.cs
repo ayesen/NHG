@@ -13,7 +13,7 @@ public class FieldOfView : MonoBehaviour
 
     public LayerMask targetMask;
     public LayerMask obstacleMask;
-
+    
     [HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
 
