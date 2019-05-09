@@ -13,6 +13,8 @@ public class PlayerMove : MonoBehaviour
     public bool red = false;
     public bool blue = false;
     public bool promptMSG = false;
+    public bool silverKey = false;
+    public bool goldenKey = false;
 
     // elevator and shit
     public bool ready2Go = false;

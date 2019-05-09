@@ -14,8 +14,7 @@ public class DoorOpen : MonoBehaviour
     public float bNF = -1; // 1: opened -1: closed
     private string interWords;
     public Transform myself;
-
-    
+    public bool goldenKeyDoor;
 
     private void Start()
     {
@@ -25,7 +24,13 @@ public class DoorOpen : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)&&girlWithin)
+        if (Input.GetKeyDown(KeyCode.E) && girlWithin && !PlayerMove.me.silverKey)
+        {
+            interWords = "You need a silver key";
+            fInteraction.text = interWords;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E)&&girlWithin&&PlayerMove.me.silverKey)
         {
             openFlag = true;
             bNF = -bNF;
@@ -49,7 +54,6 @@ public class DoorOpen : MonoBehaviour
             if (transform.rotation.eulerAngles.z < limitDegree && openFlag)
             {
                 degree = speedRotate * Time.deltaTime*bNF;
-                
             }
             if(transform.rotation.eulerAngles.z > limitDegree)
             {
@@ -79,7 +83,7 @@ public class DoorOpen : MonoBehaviour
             girlWithin = true;
             interWords = "Press E";
             fInteraction.text = interWords;
-
+            
             //print(trigger.gameObject.name+"enter the area");
         }
         
