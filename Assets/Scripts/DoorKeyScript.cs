@@ -17,11 +17,13 @@ public class DoorKeyScript : MonoBehaviour
             {
                 PlayerMove.me.silverKey = true;
                 fInteraction.text = "Silver Key Obtained";
+                InventoryScript.me.silverKey.enabled = !InventoryScript.me.silverKey.enabled;
             }
             else if (Input.GetKeyDown(KeyCode.E) && goldenKeyCabinet)
             {
                 PlayerMove.me.goldenKey = true;
                 fInteraction.text = "Golden Key Obtained";
+                InventoryScript.me.goldenKey.enabled = !InventoryScript.me.goldenKey.enabled;
             }
         }
     }

@@ -84,6 +84,10 @@ public class DoorOpen : MonoBehaviour
                 }
             }
         }
+    }
+
+    void FixedUpdate()
+    {
         RotateDoor(openFlag);
         myself.Rotate(0, 0, degree);
     }

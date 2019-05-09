@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ElectricityScript : MonoBehaviour
 {
     public bool on = false;
     public string msg;
-
+    public Text fInteraction;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +27,29 @@ public class ElectricityScript : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))//&&PlayerMove.me.blue && PlayerMove.me.red)
             {
-                print("elevator on");
+                fInteraction.text = "Elevator on";
                 on = true;
             }
             else if ((!PlayerMove.me.blue || !PlayerMove.me.red) && Input.GetKeyDown(KeyCode.E))
             {
-                print("missing component");
+                fInteraction.text = "Missing Fuse";
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            fInteraction.text = "Press E to Push Button ";
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            fInteraction.text = " ";
         }
     }
 }

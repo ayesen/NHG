@@ -9,7 +9,7 @@ public class newElevatorScript : MonoBehaviour
     public Vector3 targetPos3;
     public Vector3 targetPos2;
     public float moveSpd;
-    public bool girlInside = false;
+    public static bool girlInside = false;
 
     public GameObject player;
     public GameObject floor1;

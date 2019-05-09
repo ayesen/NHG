@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ElevatorButtonScript : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class ElevatorButtonScript : MonoBehaviour
     public GameObject leftDoor;
     public GameObject rightDoor;
     public newElevatorScript els;
-    
+    public Text fInteraction;
+
     public Vector3 leftDoorOpenPos;
     public Vector3 rightDoorOpenPos;
     public Vector3 leftDoorClosedPos;
@@ -30,7 +32,7 @@ public class ElevatorButtonScript : MonoBehaviour
     {
         leftDoor.transform.position = Vector3.MoveTowards(leftDoor.transform.position, leftDoorTarget, openSpd * Time.deltaTime);
         rightDoor.transform.position = Vector3.MoveTowards(rightDoor.transform.position, rightDoorTarget, openSpd * Time.deltaTime);
-        if (els.girlInside)
+        if (newElevatorScript.girlInside)
         {
             leftDoorTarget = leftDoorClosedPos;
             rightDoorTarget = rightDoorClosedPos;
@@ -51,8 +53,25 @@ public class ElevatorButtonScript : MonoBehaviour
             }
             else if (!es.on && Input.GetKeyDown(KeyCode.E))
             {
-                print("not powered");
+                fInteraction.text = "Elevator Not Powered";
+                //print("not powered");
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            fInteraction.text = "Press E to Push Button ";
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            fInteraction.text = " ";
         }
     }
 }
