@@ -589,6 +589,10 @@ MonoBehaviour:
   cabinet:
   - {fileID: 8300000, guid: 0fc0f439d01a83c4ca964144e2d87f5b, type: 3}
   - {fileID: 8300000, guid: 7516644e32c67f44b96e1646348f3716, type: 3}
+  interactiveSound:
+  - {fileID: 8300000, guid: 629a3cc702dc35e49a0a4ca0a79cc28a, type: 3}
+  - {fileID: 8300000, guid: 2e32f2f5f6db3d1479412d190dd8710e, type: 3}
+  - {fileID: 8300000, guid: 52a06fa45add902458abd06a43657fea, type: 3}
   player: {fileID: 1790452039}
 --- !u!4 &17352178
 Transform:
@@ -16028,8 +16032,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -844.6, y: -490.23285}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -861.4, y: -474}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &480393057
 GameObject:
@@ -18671,8 +18675,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -722.1, y: -483}
-  m_SizeDelta: {x: 34.5, y: 79.3}
+  m_AnchoredPosition: {x: -740.7, y: -468.7}
+  m_SizeDelta: {x: 40, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &550424456
 GameObject:
@@ -31092,8 +31096,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -910, y: -490.23285}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -918.2, y: -475.4}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &872744703
 GameObject:
@@ -43234,8 +43238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -782.6, y: -483}
-  m_SizeDelta: {x: 34.5, y: 79.3}
+  m_AnchoredPosition: {x: -798.2, y: -468.8}
+  m_SizeDelta: {x: 40, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1189719320
 GameObject:
@@ -47770,7 +47774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -908}
+  m_AnchoredPosition: {x: -2.1, y: -1253}
   m_SizeDelta: {x: 455.8, y: 182.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1319685225
@@ -47786,7 +47790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charsPerSecond: 0.15
-  scrollSpeed: 10
+  scrollSpeed: 20
 --- !u!114 &1319685226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53073,6 +53077,7 @@ MonoBehaviour:
   on: 0
   msg: 
   fInteraction: {fileID: 1933978892}
+  flag: 0
 --- !u!61 &1442032163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54601,7 +54606,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 2
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -69727,7 +69732,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -152, y: -652}
+  m_AnchoredPosition: {x: -697.85, y: -884}
   m_SizeDelta: {x: 524.3, y: 747.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1838495051
@@ -69766,7 +69771,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 79c79d84fed744e949411c8f4b65839a, type: 3}
-    m_FontSize: 10
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -69777,9 +69782,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "                              \nCredit\n\nGame Designer\nJames Yuan, Ivory
-    Xu, Cooper Yang\n\nProgramming Director\nJames Yuan\n\nGraphic Director\nIvory
-    Xu\n\nAudio Director\nCooper Yang\n\nSpecial Thanks to\nGabe Cuzzillo, Hosni Auji"
+  m_Text: "                              \n                         \n           \nCredit\n\nGame
+    Designer\nJames Yuan, Ivory Xu, Cooper Yang\n\nProgramming Director\nJames Yuan\n\nGraphic
+    Director\nIvory Xu\n\nAudio Director\nCooper Yang\n\nSpecial Thanks to\nGabe Cuzzillo,
+    Hosni Auji"
 --- !u!222 &1838495053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -74119,7 +74125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -188.91}
+  m_AnchoredPosition: {x: 0, y: -531.57}
   m_SizeDelta: {x: 713.5, y: 89.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1933978892
@@ -74144,7 +74150,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 459531c9e401844fea8e1c85ad83fa27, type: 3}
-    m_FontSize: 12
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1

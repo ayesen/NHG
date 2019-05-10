@@ -10,21 +10,11 @@ public class ThingScript : MonoBehaviour
     public bool red;
     public bool blue;
     public Text fInteraction;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    bool flag;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-    }
-    
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
+        if (flag)
         {
             //player.GetComponent<PlayerMove>().promptMSG = true;
             if (red && Input.GetKeyDown(KeyCode.E))
@@ -40,6 +30,8 @@ public class ThingScript : MonoBehaviour
         }
     }
 
+
+
     //private void OnTriggerExit2D(Collider2D collision)
     //{
     //    if (collision.tag == "Player")
@@ -53,6 +45,7 @@ public class ThingScript : MonoBehaviour
         if (collision.tag == "Player")
         {
             fInteraction.text = "Press E to Push Button ";
+            flag = true;
         }
     }
 
@@ -61,6 +54,7 @@ public class ThingScript : MonoBehaviour
         if (collision.tag == "Player")
         {
             fInteraction.text = " ";
+            flag = false;
         }
     }
 }

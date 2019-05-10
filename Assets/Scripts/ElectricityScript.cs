@@ -8,31 +8,22 @@ public class ElectricityScript : MonoBehaviour
     public bool on = false;
     public string msg;
     public Text fInteraction;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool flag;
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
+        if (flag)
         {
-
             if (Input.GetKeyDown(KeyCode.E))//&&PlayerMove.me.blue && PlayerMove.me.red)
             {
                 fInteraction.text = "Elevator on";
                 on = true;
+                SoundManager.me.ButtonPressedSound(transform.position);
             }
             else if ((!PlayerMove.me.blue || !PlayerMove.me.red) && Input.GetKeyDown(KeyCode.E))
             {
                 fInteraction.text = "Missing Fuse";
+                SoundManager.me.FailedElectricSound(transform.position);
             }
         }
     }
@@ -42,6 +33,7 @@ public class ElectricityScript : MonoBehaviour
         if (collision.tag == "Player")
         {
             fInteraction.text = "Press E to Push Button ";
+            flag = true;
         }
     }
 
@@ -50,6 +42,7 @@ public class ElectricityScript : MonoBehaviour
         if (collision.tag == "Player")
         {
             fInteraction.text = " ";
+            flag = false;
         }
     }
 }
