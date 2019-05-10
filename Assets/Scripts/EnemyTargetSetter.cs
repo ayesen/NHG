@@ -31,11 +31,6 @@ public class EnemyTargetSetter : MonoBehaviour
             transform.position = player.transform.position;
         }
 
-        //if (!FieldOfView.on)
-        //{
-        //    transform.position = currentMonster;
-        //}
-
         if (player.GetComponent<PlayerMove>().roomPlayerIsIn == roomEnemyIsIn && FieldOfView.on && activated) // if player and enemy in the same room, the enemy is activated, and the torchligth is on, chase player
         {
             transform.position = player.transform.position;
@@ -43,7 +38,6 @@ public class EnemyTargetSetter : MonoBehaviour
 
         if (!FieldOfView.on && lightSources.Length>0) // if the flashlight is off and there is at least one light source
         {
-            
             float ClosestDisToLight = 999999999;
             float disToLight = 0;
             print(disToLight);
@@ -64,15 +58,17 @@ public class EnemyTargetSetter : MonoBehaviour
             if (closestLight != null) // if there is a closestLight
             {
                 transform.position = closestLight.transform.position; // enemy chase the light source
+                if (disToLight < 0.5f) // if the enemy touched the light source
+                {
+                    monster.SetActive(false);// kill the enemy
+                }
             }
             if (closestLight == null) // if there isn't a light source on and not in a sealed room
             {
                 transform.position = currentMonster; // stay put
             }
         }
-        
-        // need to know distance between enemy and light source and goes to the closest one
-        // need to know if light source is in a cealed room
-        // need to know if light source is on
     }
+
+    
 }
