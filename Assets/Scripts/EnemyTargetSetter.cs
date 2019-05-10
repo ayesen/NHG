@@ -36,7 +36,7 @@ public class EnemyTargetSetter : MonoBehaviour
             transform.position = player.transform.position;
         }
 
-        if (!FieldOfView.on && lightSources.Length>0) // if the flashlight is off and there is at least one light source
+        if (!FieldOfView.on && lightSources.Length>0 && activated) // if the flashlight is off and there is at least one light source
         {
             float ClosestDisToLight = 999999999;
             float disToLight = 0;
