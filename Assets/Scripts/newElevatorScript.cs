@@ -10,6 +10,7 @@ public class newElevatorScript : MonoBehaviour
     public Vector3 targetPos2;
     public float moveSpd;
     public static bool girlInside = false;
+    
 
     public GameObject player;
     public GameObject floor1;
@@ -41,6 +42,7 @@ public class newElevatorScript : MonoBehaviour
             targetPos2 = currentFloor;
             targetPos3 = floorStorage;
         }
+        
     }
 
     public void OnTriggerEnter2D(Collider2D trigger)
@@ -49,6 +51,7 @@ public class newElevatorScript : MonoBehaviour
         {
             print("cargo in the ship");
             girlInside = true;
+            SoundManager.me.EleDoorClose(transform.position);
             SoundManager.me.EleLongMusic(transform.position);
             //player.GetComponent<PlayerMove>().ready2Go = true;
         }

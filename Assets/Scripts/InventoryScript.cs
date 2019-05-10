@@ -7,7 +7,7 @@ public class InventoryScript : MonoBehaviour
 {
     public static InventoryScript me;
     public Image silverKey;
-    public Image goldenKey;
+    public Image goldenKey; 
     public Image redFuse;
     public Image blueFuse;
 

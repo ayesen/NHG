@@ -8,23 +8,26 @@ public class DoorKeyScript : MonoBehaviour
     public bool goldenKeyCabinet;
     public bool silverKeyCabinet;
     public Text fInteraction;
+    private bool flag;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.tag == "Player")
+        if (flag)
         {
-            if (Input.GetKeyDown(KeyCode.E) && silverKeyCabinet)
-            {
-                PlayerMove.me.silverKey = true;
-                fInteraction.text = "Silver Key Obtained";
-                InventoryScript.me.silverKey.enabled = !InventoryScript.me.silverKey.enabled;
-            }
-            else if (Input.GetKeyDown(KeyCode.E) && goldenKeyCabinet)
-            {
-                PlayerMove.me.goldenKey = true;
-                fInteraction.text = "Golden Key Obtained";
-                InventoryScript.me.goldenKey.enabled = !InventoryScript.me.goldenKey.enabled;
-            }
+            
+                if (Input.GetKeyDown(KeyCode.E) && silverKeyCabinet)
+                {
+                    PlayerMove.me.silverKey = true;
+                    fInteraction.text = "Silver Key Obtained";
+                    InventoryScript.me.silverKey.enabled = !InventoryScript.me.silverKey.enabled;
+                }
+                else if (Input.GetKeyDown(KeyCode.E) && goldenKeyCabinet)
+                {
+                    PlayerMove.me.goldenKey = true;
+                    fInteraction.text = "Golden Key Obtained";
+                    InventoryScript.me.goldenKey.enabled = !InventoryScript.me.goldenKey.enabled;
+                }
+            
         }
     }
 
@@ -32,6 +35,7 @@ public class DoorKeyScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            flag = true;
             fInteraction.text = "Press E to interact with cabinet ";
         }
     }
@@ -40,6 +44,7 @@ public class DoorKeyScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            flag = false;
             fInteraction.text = " ";
         }
     }

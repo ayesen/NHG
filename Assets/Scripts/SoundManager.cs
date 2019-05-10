@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip[] doorClose;
     public AudioClip[] elevator;//0 is open, 1 is close, 2 is short music,3 is long music 
     public AudioClip[] torchLight;//0 is open, 1 is close
+    public AudioClip[] cabinet;//0 is open, 1 is close
     public Transform player;
 
     Vector3 playerPos;
@@ -88,6 +89,11 @@ public class SoundManager : MonoBehaviour
     {
         int clipNum = GetRandom(doorOpen.Length, lastDoorOpen);
         lastDoorOpen = PlaySound(doorOpen, clipNum, doorPosition);
+    }
+
+    public void CabinetOpenSound(Vector3 cabinetPosition)
+    {
+        PlaySound(cabinet, 0, cabinetPosition);
     }
 
     public void EleDoorOpen(Vector3 eleDoor)

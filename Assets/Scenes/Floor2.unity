@@ -582,10 +582,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ce88f2de5edc3a444852b7a920724b57, type: 3}
   - {fileID: 8300000, guid: b53fb8983292f4742b68fb236f6d9e03, type: 3}
   - {fileID: 8300000, guid: b1f543f0438fb6743810058ed8f862cf, type: 3}
-  - {fileID: 8300000, guid: b4604aa25f0f3dc4891d1df6bcca511e, type: 3}
+  - {fileID: 8300000, guid: 09a3322fdc5ddb5418e0cbe9dfb3012d, type: 3}
   torchLight:
   - {fileID: 8300000, guid: 2d3eceeeecdf4e448936ce9b8a08686d, type: 3}
   - {fileID: 8300000, guid: 0f89cc43f21c43544b1f5b6100e3df7a, type: 3}
+  cabinet:
+  - {fileID: 8300000, guid: 0fc0f439d01a83c4ca964144e2d87f5b, type: 3}
+  - {fileID: 8300000, guid: 7516644e32c67f44b96e1646348f3716, type: 3}
   player: {fileID: 1790452039}
 --- !u!4 &17352178
 Transform:
@@ -38337,7 +38340,7 @@ MonoBehaviour:
   player: {fileID: 1790452038}
   monster: {fileID: 1333644901}
   currentMonster: {x: 0, y: 0, z: 0}
-  posInEachRoom: []
+  lightSources: []
   roomSealed: 1
   activated: 0
   roomEnemyIsIn: 0
@@ -47767,7 +47770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -610.7, y: -1672}
+  m_AnchoredPosition: {x: 0, y: -908}
   m_SizeDelta: {x: 455.8, y: 182.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1319685225
@@ -49581,7 +49584,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17107415, y: -2.3341048}
+  m_Offset: {x: 0.17107415, y: -1.9509127}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -49592,7 +49595,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5917811, y: 1.6979729}
+  m_Size: {x: 3.5917811, y: 2.464357}
   m_EdgeRadius: 0
 --- !u!4 &1363080325
 Transform:
@@ -54598,7 +54601,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 2
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -69724,7 +69727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -610.7, y: -974}
+  m_AnchoredPosition: {x: -152, y: -652}
   m_SizeDelta: {x: 524.3, y: 747.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1838495051
@@ -69763,10 +69766,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 79c79d84fed744e949411c8f4b65839a, type: 3}
-    m_FontSize: 31
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 49
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -74116,7 +74119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -537}
+  m_AnchoredPosition: {x: 0, y: -188.91}
   m_SizeDelta: {x: 713.5, y: 89.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1933978892
@@ -74141,7 +74144,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 459531c9e401844fea8e1c85ad83fa27, type: 3}
-    m_FontSize: 36
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
