@@ -33,13 +33,7 @@ public class CameraControl : MonoBehaviour
         camCurrentPos.x = Mathf.Lerp(camCurrentPos.x, endScenePos.x, scrollSpd * Time.deltaTime);
 
         transform.position = camCurrentPos;
-        //if (limit > 0)
-        //{
-        //    Vector3 x = new Vector3(player.position.x - scrollSpd * Time.deltaTime, player.position.y, 0);
-        //    transform.position = x;
-        //    limit -= scrollSpd;
-        //    print(limit);
-        //}
 
+        
     }
 }
