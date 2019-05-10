@@ -18,6 +18,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip[] torchLight;//0 is open, 1 is close
     public AudioClip[] cabinet;//0 is open, 1 is close
     public AudioClip[] interactiveSound;//0 is button, 1 is electric, 2 is paper,3 is unlock, 4 is lock
+    public AudioClip[] lightSwitch;//0 is open, 1 is close
     public Transform player;
 
     Vector3 playerPos;
@@ -110,6 +111,21 @@ public class SoundManager : MonoBehaviour
     public void FailedElectricSound(Vector3 button)
     {
         PlaySound(interactiveSound, 1, button);
+    }
+
+    public void SwithOnLight(Vector3 light)
+    {
+        PlaySound(lightSwitch, 0, light);
+    }
+
+    public void SwithOffLight(Vector3 light)
+    {
+        PlaySound(lightSwitch, 1, light);
+    }
+
+    public void Rev(Vector3 engine)
+    {
+        PlaySound(interactiveSound, 5, engine);
     }
 
     public void PaperSound(Vector3 paper)

@@ -32,6 +32,7 @@ public class ElectricityScript : MonoBehaviour
                 fInteraction.text = "Elevator on";
                 on = true;
                 SoundManager.me.FailedElectricSound(transform.position);
+                SoundManager.me.Rev(transform.position);
                 InventoryScript.me.redFuse.enabled = false;
                 InventoryScript.me.blueFuse.enabled = false;
             }

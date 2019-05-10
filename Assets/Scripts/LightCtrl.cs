@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LightCtrl : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class LightCtrl : MonoBehaviour
     bool playerInZone = false;
     bool enemyInZone = false;
     public GameObject[] enemy;
+    public Text fInteraction;
+    bool open;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +33,22 @@ public class LightCtrl : MonoBehaviour
             }
         }
 
+        if (playerInZone && Input.GetKeyDown(KeyCode.E) && !open)
+        {
+            SoundManager.me.LightOpen(transform.position);
+            open = false;
+        }
+
+        if (playerInZone && Input.GetKeyDown(KeyCode.E) && open)
+        {
+            SoundManager.me.LightClose(transform.position);
+            open = true;
+        }
+
         if (playerInZone && Input.GetKeyDown(KeyCode.E))
         {
             on = !on;
-            SoundManager.me.LightClose(transform.position);
+            SoundManager.me.SwithOnLight(transform.position);
             GetComponent<FieldOfViewForLightSources>().viewAngle = on ? 360 : 0;
         }
 
@@ -50,6 +65,8 @@ public class LightCtrl : MonoBehaviour
         if (collision.tag == "Player")
         {
             playerInZone = true;
+            fInteraction.text = "Press e to switch the light";
+
         }
 
         if (collision.tag == "Enemy" && !collision.GetComponent<KillTheGirl>().killing)
@@ -67,6 +84,7 @@ public class LightCtrl : MonoBehaviour
         if (collision.tag == "Player")
         {
             playerInZone = false;
+            fInteraction.text = " ";
         }
 
         if (collision.tag == "Enemy")
