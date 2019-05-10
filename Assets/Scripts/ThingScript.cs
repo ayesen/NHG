@@ -21,11 +21,13 @@ public class ThingScript : MonoBehaviour
             {
                 player.GetComponent<PlayerMove>().red = true;
                 fInteraction.text = "Red Fuse Obtained";
+                InventoryScript.me.redFuse.enabled = !InventoryScript.me.redFuse.enabled;
             }
             else if (blue && Input.GetKeyDown(KeyCode.E))
             {
                 player.GetComponent<PlayerMove>().blue = true;
                 fInteraction.text = "Blue Fuse Obtained";
+                InventoryScript.me.blueFuse.enabled = !InventoryScript.me.blueFuse.enabled;
             }
         }
     }
