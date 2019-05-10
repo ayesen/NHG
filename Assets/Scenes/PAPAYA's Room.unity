@@ -586,6 +586,8 @@ MonoBehaviour:
   torchLight:
   - {fileID: 8300000, guid: 2d3eceeeecdf4e448936ce9b8a08686d, type: 3}
   - {fileID: 8300000, guid: 0f89cc43f21c43544b1f5b6100e3df7a, type: 3}
+  cabinet: []
+  interactiveSound: []
   player: {fileID: 1790452039}
 --- !u!4 &17352178
 Transform:
@@ -50898,6 +50900,7 @@ MonoBehaviour:
   on: 0
   msg: 
   fInteraction: {fileID: 0}
+  flag: 0
 --- !u!61 &1442032163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66356,7 +66359,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804678233}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
