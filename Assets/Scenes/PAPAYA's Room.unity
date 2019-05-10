@@ -10694,6 +10694,7 @@ MonoBehaviour:
   player: {fileID: 1790452038}
   red: 0
   blue: 1
+  fInteraction: {fileID: 0}
 --- !u!61 &334075578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45059,7 +45060,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.022385597, y: -0.014923722}
+  m_Offset: {x: -0.00293684, y: 0.11168754}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -45070,7 +45071,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6715851, y: 1.6865096}
+  m_Size: {x: 3.2415643, y: 3.459069}
   m_EdgeRadius: 0
 --- !u!50 &1302806854
 Rigidbody2D:
@@ -46233,6 +46234,7 @@ MonoBehaviour:
   leftDoor: {fileID: 1261015900}
   rightDoor: {fileID: 1896217656}
   els: {fileID: 1363080327}
+  fInteraction: {fileID: 0}
   leftDoorOpenPos: {x: -0.822, y: -1.62, z: 10}
   rightDoorOpenPos: {x: 4.406, y: -1.62, z: 10}
   leftDoorClosedPos: {x: 0.9269999, y: -1.62, z: 10}
@@ -47455,7 +47457,6 @@ MonoBehaviour:
   targetPos3: {x: 0, y: 0, z: 0}
   targetPos2: {x: 0, y: 0, z: 0}
   moveSpd: 5
-  girlInside: 0
   player: {fileID: 1790452038}
   floor1: {fileID: 0}
   floor2: {fileID: 2123163763}
@@ -50896,6 +50897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   on: 0
   msg: 
+  fInteraction: {fileID: 0}
 --- !u!61 &1442032163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59874,6 +59876,7 @@ MonoBehaviour:
   player: {fileID: 1790452038}
   red: 1
   blue: 0
+  fInteraction: {fileID: 0}
 --- !u!61 &1641435810
 BoxCollider2D:
   m_ObjectHideFlags: 0
