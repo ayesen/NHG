@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class newElevatorScript : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class newElevatorScript : MonoBehaviour
     public PlayerMove playerMoveScript;
     public Animator playerAni;
     public Animator darkPlayerAni;
+    public Text fInteraction;
 
     public GameObject player;
     public GameObject floor1;
@@ -44,6 +47,10 @@ public class newElevatorScript : MonoBehaviour
             targetPos2 = currentFloor;
             targetPos3 = floorStorage;
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
         
     }
 
@@ -60,6 +67,7 @@ public class newElevatorScript : MonoBehaviour
             InventoryScript.me.blueFuse.enabled = false;
             playerAni.enabled = false;
             darkPlayerAni.enabled = false;
+            fInteraction.text = "Press R to Restart";
             SoundManager.me.EleDoorClose(transform.position);
             SoundManager.me.EleLongMusic(transform.position);
             //player.GetComponent<PlayerMove>().ready2Go = true;

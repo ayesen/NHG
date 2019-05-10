@@ -37,6 +37,8 @@ public class KillTheGirl : MonoBehaviour
   
             collision.GetComponent<PlayerMove>().enabled = false;
 
+
+
             Debug.Log("hehe");
 
         }

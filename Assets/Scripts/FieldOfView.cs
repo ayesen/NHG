@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
-    public static bool on = true;
+    public static bool on = false;
     
     public float viewRadius;
     [Range(0,360)]
@@ -27,6 +27,8 @@ public class FieldOfView : MonoBehaviour
 
     private void Start()
     {
+        viewAngle = 0;
+        //on = false;
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;

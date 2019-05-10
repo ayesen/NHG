@@ -9,23 +9,36 @@ public class DoorKeyScript : MonoBehaviour
     public bool silverKeyCabinet;
     public Text fInteraction;
     private bool flag;
+    bool open;
 
     private void Update()
     {
         if (flag)
         {
-            
-                if (Input.GetKeyDown(KeyCode.E) && silverKeyCabinet)
+            if (Input.GetKeyDown(KeyCode.E) && !open)
+            {
+                SoundManager.me.CabinetOpenSound(transform.position);
+                open = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.E) && open)
+            {
+                SoundManager.me.CabinetCloseSound(transform.position);
+                open = true;
+            }
+
+
+            if (Input.GetKeyDown(KeyCode.E) && silverKeyCabinet)
                 {
                     PlayerMove.me.silverKey = true;
                     fInteraction.text = "Silver Key Obtained";
-                    InventoryScript.me.silverKey.enabled = !InventoryScript.me.silverKey.enabled;
+                    InventoryScript.me.silverKey.enabled = true;
                 }
                 else if (Input.GetKeyDown(KeyCode.E) && goldenKeyCabinet)
                 {
                     PlayerMove.me.goldenKey = true;
                     fInteraction.text = "Golden Key Obtained";
-                    InventoryScript.me.goldenKey.enabled = !InventoryScript.me.goldenKey.enabled;
+                    InventoryScript.me.goldenKey.enabled = true;
                 }
             
         }

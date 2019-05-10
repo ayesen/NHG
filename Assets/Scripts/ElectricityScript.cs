@@ -9,21 +9,35 @@ public class ElectricityScript : MonoBehaviour
     public string msg;
     public Text fInteraction;
     public bool flag;
+    bool open;
 
     public void Update()
     {
         if (flag)
         {
+            if (Input.GetKeyDown(KeyCode.E) && !open)
+            {
+                SoundManager.me.CabinetOpenSound(transform.position);
+                open = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.E) && open)
+            {
+                SoundManager.me.CabinetCloseSound(transform.position);
+                open = true;
+            }
+
             if (Input.GetKeyDown(KeyCode.E)&&PlayerMove.me.blue && PlayerMove.me.red)
             {
                 fInteraction.text = "Elevator on";
                 on = true;
-                SoundManager.me.ButtonPressedSound(transform.position);
+                SoundManager.me.FailedElectricSound(transform.position);
+                InventoryScript.me.redFuse.enabled = false;
+                InventoryScript.me.blueFuse.enabled = false;
             }
             else if ((!PlayerMove.me.blue || !PlayerMove.me.red) && Input.GetKeyDown(KeyCode.E))
             {
                 fInteraction.text = "Missing Fuse";
-                SoundManager.me.FailedElectricSound(transform.position);
             }
         }
     }
@@ -32,7 +46,7 @@ public class ElectricityScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            fInteraction.text = "Press E to Push Button ";
+            fInteraction.text = "Press E to Connect the Fuse";
             flag = true;
         }
     }

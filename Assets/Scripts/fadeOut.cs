@@ -37,7 +37,7 @@ public class fadeOut : MonoBehaviour
             BlackRender.color = newColor;
         if(newColor.a >= 1)
         {
-            SceneManager.LoadScene("Room");
+            SceneManager.LoadScene("Floor2");
         }
     }
 }

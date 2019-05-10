@@ -21,12 +21,14 @@ public class LightCtrl : MonoBehaviour
         if (playerInZone && Input.GetKeyDown(KeyCode.E))
         {
             on = !on;
+            SoundManager.me.LightClose(transform.position);
             GetComponent<FieldOfViewForLightSources>().viewAngle = on ? 360 : 0;
         }
 
         if (enemyInZone)
         {
             on = false;
+            SoundManager.me.LightClose(transform.position);
             GetComponent<FieldOfViewForLightSources>().viewAngle = 0;
         }
     }
