@@ -6,6 +6,7 @@ public class KillTheGirl : MonoBehaviour
 {
     public Animator monsterAnimator;
     public GameObject girl;
+    public bool killing = false;
 
     Vector3 girlpos;
     bool isPushed = false;
@@ -37,7 +38,7 @@ public class KillTheGirl : MonoBehaviour
   
             collision.GetComponent<PlayerMove>().enabled = false;
 
-
+            killing = true;
 
             Debug.Log("hehe");
 

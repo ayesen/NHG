@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class LightCtrl : MonoBehaviour
 {
-    public bool on = true;
+    public bool on;
     public bool roomSealed = false;
     bool playerInZone = false;
     bool enemyInZone = false;
+    public GameObject[] enemy;
 
     // Start is called before the first frame update
     void Start()
     {
-        on = true;
+        if (!on)
+        {
+            GetComponent<FieldOfViewForLightSources>().viewAngle = 0;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        for (int i = 0; i < enemy.Length; i++)
+        {
+            if (enemy[i].GetComponent<KillTheGirl>().killing)
+            {
+                this.enabled = false;
+            }
+        }
+
         if (playerInZone && Input.GetKeyDown(KeyCode.E))
         {
             on = !on;
@@ -27,9 +39,9 @@ public class LightCtrl : MonoBehaviour
 
         if (enemyInZone)
         {
-            on = false;
+            //on = false;
             SoundManager.me.LightClose(transform.position);
-            GetComponent<FieldOfViewForLightSources>().viewAngle = 0;
+            //GetComponent<FieldOfViewForLightSources>().viewAngle = 0;
         }
     }
 
@@ -40,13 +52,13 @@ public class LightCtrl : MonoBehaviour
             playerInZone = true;
         }
 
-        if (collision.tag == "Enemy")
+        if (collision.tag == "Enemy" && !collision.GetComponent<KillTheGirl>().killing)
         {
             print("enemyInZone");
             enemyInZone = true;
-            collision.gameObject.SetActive(false); // disable enemy
-            GetComponent<FieldOfViewForLightSources>().viewAngle = 0; // disable self light
-            on = false;
+            //collision.gameObject.SetActive(false); // disable enemy
+            //GetComponent<FieldOfViewForLightSources>().viewAngle = 0; // disable self light
+            //on = false;
         }
     }
 
