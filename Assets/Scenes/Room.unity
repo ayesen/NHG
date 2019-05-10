@@ -9205,7 +9205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352704805}
   m_LocalRotation: {x: -0, y: -0, z: -0.6552446, w: 0.75541687}
-  m_LocalPosition: {x: 2.3376489, y: 1.4445554, z: 0}
+  m_LocalPosition: {x: 2.3376489, y: 1.444555, z: 0}
   m_LocalScale: {x: 1.4806042, y: 1.4806042, z: 1.4806042}
   m_Children: []
   m_Father: {fileID: 1436803196}
@@ -16776,6 +16776,7 @@ MonoBehaviour:
   elevator: []
   torchLight: []
   cabinet: []
+  interactiveSound: []
   player: {fileID: 684778248}
 --- !u!1 &732535761
 GameObject:
@@ -24359,6 +24360,7 @@ MonoBehaviour:
   on: 0
   msg: 
   fInteraction: {fileID: 0}
+  flag: 0
 --- !u!1 &1064774089
 GameObject:
   m_ObjectHideFlags: 0
