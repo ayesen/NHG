@@ -8,6 +8,7 @@ public class FadeIn : MonoBehaviour
 {
     public SpriteRenderer BlackRender;
     public Color newColor;
+    public float time;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class FadeIn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        double count = Time.deltaTime * 0.2;
+        double count = Time.deltaTime * time;
         if (newColor.a > 0)
         {
             newColor.a -= (float)count;
