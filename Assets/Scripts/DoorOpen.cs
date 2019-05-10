@@ -31,6 +31,7 @@ public class DoorOpen : MonoBehaviour
             {
                 interWords = "You need a silver key";
                 fInteraction.text = interWords;
+                SoundManager.me.LockSound(transform.position);
             }
 
             if (Input.GetKeyDown(KeyCode.E)&&girlWithin&&PlayerMove.me.silverKey)
@@ -39,7 +40,8 @@ public class DoorOpen : MonoBehaviour
                 bNF = -bNF;
                 if (bNF == 1)
                 {
-                         SoundManager.me.DoorOpenSound(transform.position);
+                    SoundManager.me.DoorOpenSound(transform.position);
+                    SoundManager.me.UnlockSound(transform.position);
                 }
                 if (bNF == -1)
                 {
@@ -52,6 +54,7 @@ public class DoorOpen : MonoBehaviour
             {
                 interWords = "You need a golden key";
                 fInteraction.text = interWords;
+                SoundManager.me.LockSound(transform.position);
             }
 
             if (Input.GetKeyDown(KeyCode.E) && girlWithin && PlayerMove.me.goldenKey)
@@ -61,6 +64,7 @@ public class DoorOpen : MonoBehaviour
                 if (bNF == 1)
                 {
                     SoundManager.me.DoorOpenSound(transform.position);
+                    SoundManager.me.UnlockSound(transform.position);
                 }
                 if (bNF == -1)
                 {

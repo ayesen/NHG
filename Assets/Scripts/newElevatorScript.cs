@@ -11,6 +11,8 @@ public class newElevatorScript : MonoBehaviour
     public float moveSpd;
     public static bool girlInside = false;
     public PlayerMove playerMoveScript;
+    public Animator playerAni;
+    public Animator darkPlayerAni;
 
     public GameObject player;
     public GameObject floor1;
@@ -52,6 +54,12 @@ public class newElevatorScript : MonoBehaviour
             print("cargo in the ship");
             girlInside = true;
             playerMoveScript.enabled = false;
+            InventoryScript.me.silverKey.enabled = false;
+            InventoryScript.me.goldenKey.enabled = false;
+            InventoryScript.me.redFuse.enabled = false;
+            InventoryScript.me.blueFuse.enabled = false;
+            playerAni.enabled = false;
+            darkPlayerAni.enabled = false;
             SoundManager.me.EleDoorClose(transform.position);
             SoundManager.me.EleLongMusic(transform.position);
             //player.GetComponent<PlayerMove>().ready2Go = true;

@@ -25,7 +25,7 @@ public class EnemyTargetSetter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(FieldOfView.on);
+        //print(FieldOfView.on);
 
         currentMonster = monster.transform.position;
         if (FieldOfView.on && !roomSealed && activated) // FieldOfView.on indicate whether the torchlight is on

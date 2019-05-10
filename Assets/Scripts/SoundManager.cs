@@ -17,7 +17,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip[] elevator;//0 is open, 1 is close, 2 is short music,3 is long music 
     public AudioClip[] torchLight;//0 is open, 1 is close
     public AudioClip[] cabinet;//0 is open, 1 is close
-    public AudioClip[] interactiveSound;//0 is button, 1 is electric, 2 is paper
+    public AudioClip[] interactiveSound;//0 is button, 1 is electric, 2 is paper,3 is unlock, 4 is lock
     public Transform player;
 
     Vector3 playerPos;
@@ -115,6 +115,16 @@ public class SoundManager : MonoBehaviour
     public void PaperSound(Vector3 paper)
     {
         PlaySound(interactiveSound, 2, paper);
+    }
+
+    public void LockSound(Vector3 door)
+    {
+        PlaySound(interactiveSound, 3, door);
+    }
+
+    public void UnlockSound(Vector3 door)
+    {
+        PlaySound(interactiveSound, 4, door);
     }
 
     public void EleDoorOpen(Vector3 eleDoor)

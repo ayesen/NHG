@@ -14,7 +14,7 @@ public class ElectricityScript : MonoBehaviour
     {
         if (flag)
         {
-            if (Input.GetKeyDown(KeyCode.E))//&&PlayerMove.me.blue && PlayerMove.me.red)
+            if (Input.GetKeyDown(KeyCode.E)&&PlayerMove.me.blue && PlayerMove.me.red)
             {
                 fInteraction.text = "Elevator on";
                 on = true;
