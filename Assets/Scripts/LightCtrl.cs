@@ -40,7 +40,11 @@ public class LightCtrl : MonoBehaviour
 
         if (collision.tag == "Enemy")
         {
+            print("enemyInZone");
             enemyInZone = true;
+            collision.gameObject.SetActive(false); // disable enemy
+            GetComponent<FieldOfViewForLightSources>().viewAngle = 0; // disable self light
+            on = false;
         }
     }
 

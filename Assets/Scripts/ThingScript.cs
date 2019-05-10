@@ -32,16 +32,6 @@ public class ThingScript : MonoBehaviour
         }
     }
 
-
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    if (collision.tag == "Player")
-    //    {
-    //        player.GetComponent<PlayerMove>().promptMSG = false;
-    //    }
-    //}
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")

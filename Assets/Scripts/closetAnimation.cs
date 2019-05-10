@@ -33,7 +33,7 @@ public class closetAnimation : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("WTF");
+        //Debug.Log("WTF");
         if(collision.tag == "Player")
         {
             if (thisAnimator.GetBool("closed") == true)

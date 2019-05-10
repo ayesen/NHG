@@ -33,7 +33,7 @@ public class EnemyTargetSetter : MonoBehaviour
             transform.position = player.transform.position;
         }
 
-        if (player.GetComponent<PlayerMove>().roomPlayerIsIn == roomEnemyIsIn && FieldOfView.on && activated) // if player and enemy in the same room, the enemy is activated, and the torchligth is on, chase player
+        if (/*player.GetComponent<PlayerMove>().roomPlayerIsIn == roomEnemyIsIn &&*/ FieldOfView.on && activated) // if player and enemy in the same room, the enemy is activated, and the torchligth is on, chase player
         {
             transform.position = player.transform.position;
         }
@@ -42,12 +42,12 @@ public class EnemyTargetSetter : MonoBehaviour
         {
             float ClosestDisToLight = 999999999;
             float disToLight = 0;
-            print(disToLight);
+            //print(disToLight);
 
             for (int i = 0; i < lightSources.Length; i++) // loop through all the light sources
             {
                 disToLight = Vector3.Distance(monster.transform.position, lightSources[i].transform.position); // get the distance between enemy and light source
-                print(disToLight);
+                //print(disToLight);
                 if (ClosestDisToLight > disToLight)  // if the distance is smaller than the current smallest one
                 {
                     if (!lightSources[i].GetComponent<LightCtrl>().roomSealed && lightSources[i].GetComponent<LightCtrl>().on) // if the light source is not in a sealed room and it is on
@@ -60,10 +60,11 @@ public class EnemyTargetSetter : MonoBehaviour
             if (closestLight != null) // if there is a closestLight
             {
                 transform.position = closestLight.transform.position; // enemy chase the light source
-                if (disToLight < 0.5f) // if the enemy touched the light source
-                {
-                    monster.SetActive(false);// kill the enemy
-                }
+
+                //if (disToLight < 0.5f) // if the enemy touched the light source
+                //{
+                //    monster.SetActive(false);// kill the enemy
+                //}
             }
             if (closestLight == null) // if there isn't a light source on and not in a sealed room
             {
